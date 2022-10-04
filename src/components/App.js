@@ -42,7 +42,11 @@ class App extends Component {
       <div id="main">
         <ol>
           {this.cityList.map((value, location) => {
-            return <li key={location}>{value.name}</li>;
+            return (
+              <li key={location}>
+                {value.name}({value.country})
+              </li>
+            );
           })}
         </ol>
       </div>
