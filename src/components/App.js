@@ -38,15 +38,14 @@ class App extends Component {
   }
 
   render() {
+    const filtered = this.cityList.filter((list) => {
+      return list.country == "India";
+    });
     return (
       <div id="main">
         <ol>
-          {this.cityList.map((value, location) => {
-            return (
-              <li key="location">
-                {value.name}
-              </li>
-            );
+          {filtered.map((value, location) => {
+            return <li key="location">{value.name}</li>;
           })}
         </ol>
       </div>
