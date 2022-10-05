@@ -44,7 +44,7 @@ class App extends Component {
           {this.cityList.map((value, location) => {
             return (
               <li key="location">
-                {value.name}({value.country})
+                {value.name}
               </li>
             );
           })}
